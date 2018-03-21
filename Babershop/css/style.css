@@ -91,7 +91,7 @@ a{
 }
 .login:hover,
 .login:focus{
-    background:  url(../img/login.png) no-repeat 15px center, #8b0410;
+    background:  url(../img/login.png) no-repeat 15px center, #663d15;
 }
 .logo svg{
     width: 365px;
@@ -180,7 +180,7 @@ section.contacts{
 }
 .link:hover,
 .link:focus{
-    background: #8b0410;
+    background: #663d15;
 }
 .link_wrapper{
     display: flex;
@@ -209,7 +209,7 @@ section.contacts{
     cursor: pointer;
 }
 .gallery .gallery_container .owl-nav button:hover{
-    background: #8b0410;
+    background: #663d15;
 }
 .gallery .gallery_container .owl-nav button:focus{
     outline: none;
@@ -276,7 +276,7 @@ section.contacts{
 }
 .link__underline:hover,
 .link__underline:focus{
-    color: #8b0410;
+    color: #663d15;
 }
 .main_footer .main_text{
     margin: 0;
@@ -304,7 +304,7 @@ section.contacts{
 }
 .social_link:hover svg,
 .social_link:focus svg{
-    fill: #8b0410;
+    fill: #663d15;
 }
 .main_footer{
     background: rgba(0, 0, 0, 0.9);
@@ -318,14 +318,14 @@ section.contacts{
 .main_footer .link:hover,
 .main_footer .link:focus{
     box-shadow: none;
-    color: #8b0410;
+    color: #663d15;
 }
 
 
 
 /*         BARBERSHOP ITEM              */
 .default .logo{
-    padding: 27px 15px;
+    padding: 26px 15px;
 }
 .default .menu{
     flex-grow: 2;
@@ -333,6 +333,7 @@ section.contacts{
 .default .main{
     background: linear-gradient(to bottom right, #f8f5f2, #fdfaf7);
     padding-top: 2.5rem;
+    text-align: left;
 }
 .page_title{
     text-align: left;
@@ -405,8 +406,10 @@ span.price{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    text-align: left;
+    margin-bottom: 7rem;
 }
-.main_link:before{
+.main_item:before{
     content: '';
     display: inline-block;
     width: 7px;
@@ -422,6 +425,124 @@ span.price{
 /*     END BARBERSHOP ITEM              */
 
 
+/*              PRICE                */
+.page_title__lines{
+    text-align: center;
+    font-size: 4.8rem;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4rem;
+}
+.page_title__lines:before{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 15%;
+    top: calc(50% - 2px);
+    left: 0;
+    z-index: 5;
+    height: 2px;
+    background: #000000;
+}
+.page_title__lines:after{
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 15%;
+    top: calc(50% - 2px);
+    right: 0;
+    z-index: 5;
+    height: 2px;
+    background: #000000;
+}
+.price_list .column{
+    width: 50%;
+}
+.price_list .column .main_text{
+    max-width: 38rem;
+}
+.price_table{
+    border-collapse: collapse;
+    border: 2px solid #000;
+    width: 100%;
+    margin-bottom: 12rem;
+}
+.price_table td{
+    border-collapse: collapse;
+    border: 2px solid #000;
+    width: 50%;
+    padding: 12px 20px;
+}
+.subtitle_small{
+    font-size: 2.4rem;
+}
+.price_list .main_item{
+    line-height: 2.7;
+}
+/*           END PRICE               */
+
+
+
+
+/*               SHOP             */
+.select{
+    width: 30%;
+    padding-top: 5rem;
+}
+.show_items{
+    width: 70%;
+    padding-top: 5rem;
+}
+input[type='radio'],
+input[type='checkbox']{
+    display: none;
+}
+.select label{
+    display: block;
+    margin-bottom: 1.5rem;
+}
+.select_manufacturers{
+    margin-bottom: 6rem;
+}
+input[type='checkbox'] + label:before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: transparent;
+    border: 2px solid #000101;
+    margin-right: 2.5rem;
+    vertical-align: -7px;
+}
+input[type='checkbox']:checked + label:before{
+    background: url(../img/cross.png) center no-repeat;
+}
+input[type='radio'] + label:before{
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: transparent;
+    border: 2px solid #000101;
+    margin-right: 2.5rem;
+    vertical-align: -7px;
+}
+input[type='radio']:checked + label:before{
+    background: url(../img/dott.png) center no-repeat;
+}
+.select_form .link{
+    margin-top: 6rem;
+}
+.show_items{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.show_items .shop_item{
+    width: 30%;
+}
+/*         END   SHOP             */
 
 
 
@@ -454,6 +575,9 @@ span.price{
     .item_description{
         padding-left: 5rem;
     }
+    .menu_link{
+        padding: 29px 20px;
+    }
 }
 @media screen and (max-width: 770px){
     .container{
@@ -465,7 +589,8 @@ span.price{
     }
     .menu_toggler{
         display: block;
-   }
+        flex-grow: 1;
+    }
    .advantages{
        flex-direction: column;
    }
@@ -549,6 +674,35 @@ span.price{
    }
    .item_description{
        padding: 0;
+   }
+   .flex_container{
+       flex-direction: column;
+   }
+   .flex_container .columnn{
+       width: 100%;
+   }
+   .price_list .column{
+       width: 100%;
+   }
+   .page_title__lines:before,
+   .page_title__lines:after{
+       display: none;
+   }
+   .page_title__lines{
+       line-height: 1.2;
+       font-size: 4rem;
+   }
+   .main_list{
+       margin-bottom: 3rem;
+       text-align: center;
+   }
+   .price_list .column .main_text{
+       max-width: 100%;
+       text-align: center;
+       margin-bottom: 3rem;
+   }
+   .price_table{
+       margin-bottom: 3rem;
    }
 }
 @media screen and (max-width: 480px){
