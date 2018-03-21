@@ -321,6 +321,110 @@ section.contacts{
     color: #8b0410;
 }
 
+
+
+/*         BARBERSHOP ITEM              */
+.default .logo{
+    padding: 27px 15px;
+}
+.default .menu{
+    flex-grow: 2;
+}
+.default .main{
+    background: linear-gradient(to bottom right, #f8f5f2, #fdfaf7);
+    padding-top: 2.5rem;
+}
+.page_title{
+    text-align: left;
+    font-size: 3rem;
+    margin-bottom: 1.3rem;
+}
+.breadcrumbs{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.breadcrumb_link{
+    color: #000000;
+}
+.breadcrumb_link:after{
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #000000;
+    transform: rotate(45deg);
+    margin: 0 18px;
+    vertical-align: 3px;
+}
+.breadcrumb_link__active{
+    color: #aba9a7;
+}
+.breadcrumb_link__active:after{
+    display: none;
+}
+.item{
+    display: flex;
+    padding-top: 6rem;
+}
+.item img{
+    box-shadow: 0 0 15px rgba(0, 1, 1, 0.2);
+}
+.big_picture{
+    margin-bottom: 2rem;
+}
+.pictures_container{
+    display: flex;
+    justify-content: space-between;
+}
+.item_description{
+    text-align: left;
+    padding-left: 8rem;
+    padding-top: 2rem;
+}
+.flex_container{
+    display: flex;
+    justify-content: space-between;
+}
+.vendor_code{
+    color: #aeaeae;
+}
+.item_description .main_text{
+    margin: 4rem 0;
+}
+span.price{
+    display: inline-block;
+    background: #e5e5e5;
+    padding: 10px 35px;
+}
+.buy{
+    margin-bottom: 6.5rem;
+}
+.main_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.main_link:before{
+    content: '';
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #000000;
+    transform: rotate(45deg);
+    margin: 0 18px 0 0;
+    vertical-align: 3px;
+}
+.item_description .subtitle{
+    font-size: 2.4rem;
+}
+/*     END BARBERSHOP ITEM              */
+
+
+
+
+
 /*           MEDIA          */
 @media screen and (max-width: 940px){
     .container{
@@ -346,6 +450,9 @@ section.contacts{
     }
     .column.developed{
         padding-left: 90px;
+    }
+    .item_description{
+        padding-left: 5rem;
     }
 }
 @media screen and (max-width: 770px){
@@ -413,6 +520,35 @@ section.contacts{
    }
    .column.developed{
        padding-left: 0;
+   }
+   .item{
+       flex-direction: column;
+   }
+   .page_title{
+       text-align: center;
+   }
+   .breadcrumbs{
+       flex-wrap: wrap;
+       text-align: center;
+       justify-content: center;
+   }
+   .default .item{
+       max-width: 440px;
+       margin: 0 auto;
+   }
+   .default img{
+       max-width: 100%;
+       box-shadow: none;
+    }
+   .pictures_container img{
+       max-width: 31%;
+       height: auto;
+   }
+   .item_pictures{
+       margin-bottom: 4rem;
+   }
+   .item_description{
+       padding: 0;
    }
 }
 @media screen and (max-width: 480px){
