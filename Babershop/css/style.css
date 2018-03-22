@@ -81,9 +81,12 @@ a{
     display: block;
     border-bottom: 3px solid transparent;
 }
+.menu_link.menu_link__active{
+    border-bottom: 3px solid #fff;
+}
 .menu_link:hover,
 .menu_link:focus{
-    border-bottom: 3px solid #fff;
+    background: rgba(255, 255, 255, 0.2);
 }
 .login{
     background: url(../img/login.png) no-repeat 15px center;
@@ -91,7 +94,7 @@ a{
 }
 .login:hover,
 .login:focus{
-    background:  url(../img/login.png) no-repeat 15px center, #663d15;
+    background: rgba(255, 255, 255, 0.2) url(../img/login.png) no-repeat 15px center;
 }
 .logo svg{
     width: 365px;
@@ -331,7 +334,7 @@ section.contacts{
     flex-grow: 2;
 }
 .default .main{
-    background: linear-gradient(to bottom right, #f8f5f2, #fdfaf7);
+    background: url(../img/bg-d.jpg);
     padding-top: 2.5rem;
     text-align: left;
 }
@@ -486,11 +489,12 @@ span.price{
 
 /*               SHOP             */
 .select{
-    width: 30%;
-    padding-top: 5rem;
+    width: 26%;
+    padding-top: 4.3rem;
+    padding-right: 25px;
 }
 .show_items{
-    width: 70%;
+    width: 74%;
     padding-top: 5rem;
 }
 input[type='radio'],
@@ -500,15 +504,18 @@ input[type='checkbox']{
 .select label{
     display: block;
     margin-bottom: 1.5rem;
+    position: relative;
+    padding-left: 4.3rem;
 }
 .select_manufacturers{
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
 }
 input[type='checkbox'] + label:before{
     content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
     background: transparent;
     border: 2px solid #000101;
     margin-right: 2.5rem;
@@ -519,20 +526,21 @@ input[type='checkbox']:checked + label:before{
 }
 input[type='radio'] + label:before{
     content: '';
-    display: inline-block;
-    width: 20px;
-    height: 20px;
+    position: absolute;
+    left: 0;
+    width: 16px;
+    height: 16px;
     border-radius: 50%;
     background: transparent;
     border: 2px solid #000101;
-    margin-right: 2.5rem;
     vertical-align: -7px;
 }
 input[type='radio']:checked + label:before{
     background: url(../img/dott.png) center no-repeat;
 }
 .select_form .link{
-    margin-top: 6rem;
+    margin-top: 3rem;
+    padding: 14px 33px;
 }
 .show_items{
     display: flex;
@@ -540,7 +548,66 @@ input[type='radio']:checked + label:before{
     justify-content: space-between;
 }
 .show_items .shop_item{
-    width: 30%;
+    width: 31.5%;
+}
+.navigation{
+    width: 100%;
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    margin-top: 2.5rem;
+}
+.nav_link{
+    width: 43px;
+    height: 43px;
+    background: #000000;
+    color: #ffffff;
+    display: block;
+    text-align: center;
+    line-height: 43px;
+    margin-right: .7rem;
+}
+.nav_link.active,
+.nav_link:hover{
+    background: #ffffff;
+    color: #000000;
+}
+.shop_item{
+    box-shadow: 0px 0px 15px 0px rgba(0, 1, 1, 0.2);
+    background: #ffffff;
+    margin-bottom: 2rem;
+}
+.item_picture{
+    width: 100%;
+    height: 16.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+.type_item{
+    text-transform: none;
+    display: block;
+}
+.name_item{
+    display: inline-block;
+    padding: 3px 17px 0;
+    line-height: 1.4;
+}
+.shop_item .buy{
+    padding: 10px 17px 14px;
+    display: flex;
+    margin: 0;
+}
+.shop_item  span.price{
+    padding: 10px 0;
+    width: 60%;
+    margin: 0;
+    text-align: center;
+}
+.shop_item  .link{
+    width: 40%;
+    padding: 10px 0;
+    margin: 0;
 }
 /*         END   SHOP             */
 
@@ -704,6 +771,34 @@ input[type='radio']:checked + label:before{
    .price_table{
        margin-bottom: 3rem;
    }
+   .select{
+       width: 100%;
+       padding: 3rem 2rem 0;
+   }
+   .select .subtitle{
+       text-align: left;
+   }
+   .select_form{
+       display: flex;
+       width: 100%;
+   }
+   .select_manufacturers,
+   .select_group{
+       width: 50%;
+   }
+   .show_items{
+       width: 100%;
+       padding: 2rem;
+   }
+   .navigation{
+       justify-content: center;
+   }
+   .show_items .shop_item{
+       width: 48%;
+   }
+   .item_picture{
+       height: 25rem;
+   }
 }
 @media screen and (max-width: 480px){
     .container{
@@ -731,6 +826,26 @@ input[type='radio']:checked + label:before{
         width: 25rem;
         margin: 0 auto 2rem;
 
+    }
+    .show_items .shop_item{
+        width: 300px;
+        display: block;
+        margin: 0 auto 2rem;
+    }
+    .item_picture{
+        height: 25rem;
+    }
+    .select_form{
+        flex-direction: column;
+        margin-bottom: 3rem;
+    }
+    .select_manufacturers,
+    .select_group{
+        width: 100%;
+    }
+    .select_form .link{
+        display: block;
+        margin: 0 auto;
     }
 }
 
